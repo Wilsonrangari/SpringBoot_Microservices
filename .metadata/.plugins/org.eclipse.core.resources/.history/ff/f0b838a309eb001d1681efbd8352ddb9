@@ -1,0 +1,16 @@
+package com;
+
+import in.ashokit.Car;
+import in.ashokit.DieselEngine;
+
+public class CarClient {
+
+	public static void main(String[] args) {
+		Car c = new Car();
+		
+		c.drive();
+		
+	}
+
+}
+    

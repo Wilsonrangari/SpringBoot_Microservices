@@ -1,0 +1,24 @@
+package in.ashokit.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import in.ashokit.request.Passenger;
+import in.ashokit.service.BookingService;
+
+@RestController
+public class BookingRestController {
+	
+	@Autowired
+	private BookingService service;
+	
+	//method to book ticket (POST)
+	
+	public ResponseEntity<Ticket> ticketBooking(Passenger passenger){}
+	
+	
+	
+	//method to get ticket (GET)
+
+}

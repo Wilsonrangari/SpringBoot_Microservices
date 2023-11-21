@@ -1,0 +1,20 @@
+package in.ashokit.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+import in.ashokit.repository.BookRepository;
+
+@Controller
+public class BookController {
+	
+	
+	private BookRepository repo;
+	public ModelAndView getBookById(Integer id) {
+		
+		ModelAndView mav= new ModelAndView();
+		return mav;
+		
+	}
+
+}

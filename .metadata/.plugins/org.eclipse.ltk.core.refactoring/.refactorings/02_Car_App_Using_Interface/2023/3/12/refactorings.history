@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;02_Car_App_Using_Interface&apos;&#x0D;&#x0A;- Original project: &apos;02_Car_App_Using_Interface&apos;&#x0D;&#x0A;- Original element: &apos;in.ashokit.Engine.java&apos;" description="Delete element" element1="/src&lt;in.ashokit{Engine.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1679306820611" subPackages="false" version="1.0"/>
+</session>

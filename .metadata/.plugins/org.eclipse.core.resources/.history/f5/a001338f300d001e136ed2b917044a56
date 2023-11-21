@@ -1,0 +1,15 @@
+package in.ashokit.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BookingRestController {
+	
+	
+	private BookingService service;
+	
+	//method to book ticket (POST)
+	
+	//method to get ticket (GET)
+
+}

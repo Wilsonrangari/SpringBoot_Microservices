@@ -1,0 +1,23 @@
+package in.ashokit.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import in.ashokit.binding.Book;
+
+@RestController
+public class BookRestController {
+	
+	@GetMapping(value="/book")
+	public Book getBook() {
+		
+		Book b = new Book();
+		b.setId(1);
+		b.setName("Wilson");
+		b.setPrice(100.00);
+		
+		
+		return b;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com;
+
+public interface InterfaceEngine {
+
+
+		public int start();
+
+	}

@@ -1,0 +1,15 @@
+package in.ashokit.entity;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class Book {
+	
+	private Integer bookId;
+	private String bookName;
+	private Double bookPrice;
+
+}

@@ -1,0 +1,34 @@
+package in.ashokit;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.ashokit.entity.Account;
+import in.ashokit.entity.AccountPK;
+import in.ashokit.repo.AccountRepository;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+		
+		AccountRepository bean = context.getBean(AccountRepository.class);
+		
+		AccountPK pk = new AccountPK();
+		pk.setAccNum(1545432321);
+		pk.setAccType("Savings");
+		
+		Account acc = new Account();
+		acc.setHolderName("Ashok");
+		acc.setBranch("Ameerpet");
+		acc.setAccountPk(pk);
+		
+		bean.save(acc);
+		
+		System.out.println("Record Saved....");
+		
+	}
+
+}

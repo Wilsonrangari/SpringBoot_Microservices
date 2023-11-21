@@ -1,0 +1,19 @@
+<html>
+<head>
+
+
+</head>
+<body>
+
+<h3>Book Details</h3>
+   <form action="">
+   
+   Book id : <input type="text" name="id"/>
+   
+   <input type="submit" value="Search"/>
+   
+   </form>
+   </body>
+
+
+</html>

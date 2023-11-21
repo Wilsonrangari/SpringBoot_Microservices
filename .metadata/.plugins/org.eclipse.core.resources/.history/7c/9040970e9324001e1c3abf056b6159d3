@@ -1,0 +1,15 @@
+package in.ashokit.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import reactor.core.publisher.Mono;
+
+@RestController
+public class MyRestController {
+	
+	public Mono<String> singleResponse(){
+		
+		return Mono.just("Hello World");
+	}
+
+}

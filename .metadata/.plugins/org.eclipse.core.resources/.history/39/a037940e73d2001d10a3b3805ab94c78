@@ -1,0 +1,53 @@
+package in.ashokit;
+
+import java.util.Optional;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.ashokit.entity.Account;
+import in.ashokit.entity.AccountPK;
+import in.ashokit.repo.AccountRepository;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+		
+		AccountRepository bean = context.getBean(AccountRepository.class);
+		
+		/*
+		
+		//Setting composite key values
+		AccountPK pk = new AccountPK();
+		pk.setAccNum(1545432321);
+		pk.setAccType("Savings");
+		
+		
+		//Setting entity data
+		Account acc = new Account();
+		acc.setHolderName("Ashok");
+		acc.setBranch("Ameerpet");
+		acc.setAccountPk(pk);  //seeting pk objec as entity object
+		 
+		bean.save(acc);
+		
+		System.out.println("Record Saved....");
+		
+		*/
+		
+		AccountPK pk = new AccountPK();
+		pk.setAccNum(1545432321);
+		pk.setAccType("Savings");
+		
+		Optional<Account> findById = bean.findById(pk);
+		
+		if(findById.isPresent()) {
+			System.out.println(findById.get());
+		}
+		
+	}
+
+}

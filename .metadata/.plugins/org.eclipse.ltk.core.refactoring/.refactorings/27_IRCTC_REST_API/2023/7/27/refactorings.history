@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;28_Make_My_Trip_App/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;27_IRCTC_REST_API&apos;&#x0D;&#x0A;- Destination element: &apos;28_Make_My_Trip_App/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     27_IRCTC_REST_API/src/main/java/in.ashokit.request&#x0D;&#x0A;     27_IRCTC_REST_API/src/main/java/in.ashokit.response" description="Copy packages" destination="=28_Make_My_Trip_App/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit.request" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit.response" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1688546883780" version="1.0"/>
+</session>

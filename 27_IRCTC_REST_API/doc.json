@@ -1,0 +1,167 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "Api Documentation",
+		"version": "1.0",
+		"title": "Api Documentation",
+		"termsOfService": "urn:tos",
+		"contact": {
+			
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0"
+		}
+	},
+	"host": "localhost:8080",
+	"basePath": "/",
+	"tags": [
+		{
+			"name": "booking-rest-controller",
+			"description": "Booking Rest Controller"
+		}
+	],
+	"paths": {
+		"/ticket": {
+			"post": {
+				"tags": [
+					"booking-rest-controller"
+				],
+				"summary": "ticketBooking",
+				"operationId": "ticketBookingUsingPOST",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "passenger",
+						"description": "passenger",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Passenger"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Ticket"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/ticket/{ticketNum}": {
+			"get": {
+				"tags": [
+					"booking-rest-controller"
+				],
+				"summary": "getTicketByNum",
+				"operationId": "getTicketByNumUsingGET",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "ticketNum",
+						"in": "path",
+						"description": "ticketNum",
+						"required": true,
+						"type": "integer",
+						"format": "int32"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Ticket"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Ticket": {
+			"type": "object",
+			"properties": {
+				"doj": {
+					"type": "string"
+				},
+				"from": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"ticketCost": {
+					"type": "number",
+					"format": "double"
+				},
+				"ticketNum": {
+					"type": "integer",
+					"format": "int32"
+				},
+				"to": {
+					"type": "string"
+				},
+				"trainNumber": {
+					"type": "string"
+				}
+			}
+		},
+		"Passenger": {
+			"type": "object",
+			"properties": {
+				"doj": {
+					"type": "string"
+				},
+				"from": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"to": {
+					"type": "string"
+				},
+				"trainNumber": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

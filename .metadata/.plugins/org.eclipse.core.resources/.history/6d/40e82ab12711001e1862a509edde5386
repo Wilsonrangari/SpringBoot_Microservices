@@ -1,0 +1,45 @@
+package in.ashokit.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import in.ashokit.request.Passenger;
+import in.ashokit.response.Ticket;
+
+@Service
+public class BookingServiceImpl implements BookingService {
+	
+	private Map<Integer, Ticket> ticktesMap = new HashMap<>();
+	private Integer ticketNum=1;
+
+	@Override
+	public Ticket bookTicket(Passenger passenger) {
+		
+		//logic
+		
+		Ticket t = new Ticket();
+		BeanUtils.copyProperties(passenger, t);
+		t.setTicketCost(500.00);
+		t.setStatus("CONFIRMED");
+		t.setTicketNum(ticketNum);
+		ticketNum++;
+		
+		ticktesMap.put(ticketNum, t);
+		return t;
+	}
+
+	@Override
+	public Ticket getTicket(Integer ticketNumber) {
+		
+		if(ticktesMap.containsKey(ticketNumber)) {
+			
+			return ticktesMap.get(ticketNumber);
+				}
+		
+		return null;
+	}
+
+}

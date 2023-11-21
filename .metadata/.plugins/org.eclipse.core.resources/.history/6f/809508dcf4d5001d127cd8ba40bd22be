@@ -1,0 +1,23 @@
+package in.ashokit.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller   //Repressent java class as controller class
+public class MsgController {
+	
+	public ModelAndView getWelcomeMsg() {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("msg", "Welcoe to Ashok It--!"); //this is my response
+		
+		//how ehere it has to display
+		mav.setViewName("message"); //my cpntroller only know file name(interbally it will be message.jsp)
+		return mav;
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,14 @@
+package in.ashokit.entity;
+
+import javax.persistence.Embeddable;
+
+import lombok.Data;
+
+@Data
+@Embeddable
+public class AccountPK {
+	
+	private Integer accNum;
+	private String accType;
+
+}

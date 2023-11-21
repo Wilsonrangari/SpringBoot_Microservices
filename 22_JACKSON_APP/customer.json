@@ -1,0 +1,11 @@
+{
+	"id": 1,
+	"name": "Wilson",
+	"email": "wilson@gmail.com",
+	"phno": 123456,
+	"address": {
+		"city": "NGP",
+		"state": "MH",
+		"country": "INDIA"
+	}
+}

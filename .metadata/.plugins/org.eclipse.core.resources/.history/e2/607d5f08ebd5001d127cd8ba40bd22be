@@ -1,0 +1,16 @@
+package in.ashokit.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller   //Repressent java class as controller class
+public class MsgController {
+	
+	Public ModelAndView getWelcomeMsg() {
+		
+		ModelAndView mav = new ModelAndView();
+		return mav;
+	}
+	
+	
+
+}

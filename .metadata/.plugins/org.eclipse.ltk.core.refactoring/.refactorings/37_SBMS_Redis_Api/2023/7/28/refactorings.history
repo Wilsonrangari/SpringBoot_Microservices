@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;in.ashokit.rest.CountyRestController.java&apos; to &apos;CountryRestController.java&apos;&#x0D;&#x0A;- Original project: &apos;37_SBMS_Redis_Api&apos;&#x0D;&#x0A;- Original element: &apos;in.ashokit.rest.CountyRestController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;in.ashokit.rest.CountryRestController.java&apos;" description="Rename compilation unit &apos;CountyRestController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.ashokit.rest{CountyRestController.java" name="CountryRestController.java" references="false" stamp="1689088282065" version="1.0"/>
+</session>

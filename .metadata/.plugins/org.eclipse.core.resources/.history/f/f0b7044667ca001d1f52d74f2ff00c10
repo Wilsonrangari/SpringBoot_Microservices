@@ -1,0 +1,15 @@
+package in.ashokit;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+	ApplicationContext ctxt= new ClassPathXmlApplicationContext("Beans.xml"); 
+	UserDao dao = ctxt.getBean(UserDao.class);
+
+	}
+
+}

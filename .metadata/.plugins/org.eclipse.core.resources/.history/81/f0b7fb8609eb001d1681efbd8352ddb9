@@ -1,0 +1,19 @@
+package com;
+
+
+public class Car {
+	
+}
+private InterfaceEngine eng;
+	
+	
+	public void drive() {
+
+		int status = eng.start();
+
+		if(status>=1) {
+			System.out.println("Journey started");
+		}
+		else
+			System.out.println("Jorney has not been started ");
+	}
